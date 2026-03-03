@@ -184,7 +184,7 @@ const Feature1Scene: React.FC<{ startFrom?: number }> = ({ startFrom = 0 }) => {
         <div className="flex-1 flex flex-col gap-6">
           <BlurReveal
             startFrom={5}
-            className="text-5xl font-bold text-white leading-tight"
+            className="text-5xl font-bold text-white leading-tight whitespace-nowrap"
             style={{ fontFamily }}
           >
             Lightning-Fast VPN
@@ -259,7 +259,7 @@ const Feature2Scene: React.FC<{ startFrom?: number }> = ({ startFrom = 0 }) => {
         <div className="flex-1 flex flex-col gap-6">
           <BlurReveal
             startFrom={5}
-            className="text-5xl font-bold text-white leading-tight"
+            className="text-5xl font-bold text-white leading-tight whitespace-nowrap"
             style={{ fontFamily }}
           >
             Threat Protection Pro
@@ -423,7 +423,7 @@ const Feature3Scene: React.FC<{ startFrom?: number }> = ({ startFrom = 0 }) => {
         <div className="flex-1 flex flex-col gap-6">
           <BlurReveal
             startFrom={5}
-            className="text-5xl font-bold text-white leading-tight"
+            className="text-5xl font-bold text-white leading-tight whitespace-nowrap"
             style={{ fontFamily }}
           >
             Dark Web Monitor
