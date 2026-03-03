@@ -1,6 +1,5 @@
 import React from "react";
-import { useCurrentFrame, useVideoConfig, interpolate, Easing } from "remotion";
-import { Noise } from "../library/components/effects/Noise";
+import { useCurrentFrame, useVideoConfig, interpolate } from "remotion";
 
 interface CyberBackgroundProps {
   variant?: "dark" | "gradient";
@@ -10,7 +9,7 @@ export const CyberBackground: React.FC<CyberBackgroundProps> = ({
   variant = "dark",
 }) => {
   const frame = useCurrentFrame();
-  const { fps, width, height } = useVideoConfig();
+  const { fps } = useVideoConfig();
 
   // Subtle grid animation
   const gridOffset = (frame / fps) * 20;
@@ -106,8 +105,6 @@ export const CyberBackground: React.FC<CyberBackgroundProps> = ({
         }}
       />
 
-      {/* Film grain */}
-      <Noise opacity={0.03} type="film" />
     </div>
   );
 };
@@ -115,7 +112,7 @@ export const CyberBackground: React.FC<CyberBackgroundProps> = ({
 // Animated particles for cyber effect
 export const CyberParticles: React.FC = () => {
   const frame = useCurrentFrame();
-  const { fps, width, height } = useVideoConfig();
+  useVideoConfig(); // For context
 
   const particles = Array.from({ length: 30 }).map((_, i) => {
     const seed = i * 1337;
